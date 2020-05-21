@@ -41,7 +41,7 @@ class Program(Tk): # основная программа
         word = self.ent.get() # <переменная>.get() считывает введённый текст
         if error(word)==True:
             self.lab2.config(text='')
-            self.lab2.config(text='')
+            self.lab3.config(text='')
             if checking(word, self.words)==True:
                 self.input=str(self.words[0])+'-'+str(self.words[1]) # добавляем слово в список правильных
                 self.good.append(self.input) # <массив>.append(<переменная>) добавляем в конец массива переменную
