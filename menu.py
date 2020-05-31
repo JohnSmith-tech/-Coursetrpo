@@ -22,11 +22,11 @@ class Menu(Tk): # меню программы
         self.lab2.pack()  # зафиксировали на окне
         self.ent = Entry(self, bd=4)  # окно для ввода текста
         self.ent.pack()  # зафиксировали на окне
-        self.start = Button(self, text='Начать тестирование', command=self.error)  # кнопка
+        self.start = Button(self, text='Начать тестирование', command=self.validation_of_input())  # кнопка
         self.start.pack()  # зафиксировали на окне
-        self.gg = Button(self, text='Показать все слова', command=self.gg)  # кнопка
-        self.gg.pack()  # зафиксировали на окне
-    def error(self): # проверка правильности ввода (при выборе кол-ва слов)
+        self.view_words = Button(self, text='Показать все слова', command=self.view_words)  # кнопка
+        self.view_words.pack()  # зафиксировали на окне
+    def validation_of_input(self): # проверка правильности ввода (при выборе кол-ва слов)
         check=self.ent.get()
         if check.isdigit() and check.count(' ')==0: # <переменная>.get() считывает введённый текст
             self.number = int(check) # <переменная>.get() считывает введённый текст
@@ -38,8 +38,8 @@ class Menu(Tk): # меню программы
                 root.mainloop()
         else:
             self.ent.delete(0, 'end') # стераем текст
-    def gg(self):
-        self.gg.destroy()
+    def view_words(self):
+        self.view_words.destroy()
         lab = Label(self)  # окно для вывода текста
         lab.config(text='\nВсе слова:', bg='#AFEEEE')  # настройка внешнего вида
         lab.pack()
