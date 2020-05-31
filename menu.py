@@ -22,7 +22,7 @@ class Menu(Tk): # меню программы
         self.lab2.pack()  # зафиксировали на окне
         self.ent = Entry(self, bd=4)  # окно для ввода текста
         self.ent.pack()  # зафиксировали на окне
-        self.start = Button(self, text='Начать тестирование', command=self.validation_of_input())  # кнопка
+        self.start = Button(self, text='Начать тестирование', command=self.validation_of_input)  # кнопка
         self.start.pack()  # зафиксировали на окне
         self.view_words = Button(self, text='Показать все слова', command=self.view_words)  # кнопка
         self.view_words.pack()  # зафиксировали на окне
