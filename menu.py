@@ -1,3 +1,4 @@
+"""pygame"""
 from tkinter import Tk
 from tkinter import Label, Entry, Button, Text
 from tkinter import DISABLED, END
@@ -5,6 +6,7 @@ from program import Program
 
 
 class Menu(Tk):
+    """Create graphic menu"""
     def __init__(self, lines):  # ввод переменных с которыми будем работать
         super().__init__()
         self.geometry('600x360+560+240')  # разрешение открывающегося окна
@@ -14,6 +16,7 @@ class Menu(Tk):
         self.lines = lines
         self.number = 0
         self.ent = 0
+        self.view_in_menu = 0
         self.lab1 = Label(self)     # окно для вывода текста
         self.lab1.config(text='Программа\n для заучивания слов\n иностранного языка\n',
                          font=('Arial', 21, 'bold'), bg='#AFEEEE')  # настройка внешнего вида
@@ -27,10 +30,12 @@ class Menu(Tk):
         self.start = Button(self, text='Начать тестирование',
                             command=self.validation_of_input)  # кнопка
         self.start.pack()  # зафиксировали на окне
-        self.view_words = Button(self, text='Показать все слова', command=self.view_words)  # кнопка
-        self.view_words.pack()  # зафиксировали на окне
+        self.view_in_menu = Button(self, text='Показать все слова',
+                                   command=self.view_words)  # кнопка
+        self.view_in_menu.pack()  # зафиксировали на окне
 
     def validation_of_input(self): # проверка правильности ввода
+        """Input 1-50"""
         check = self.ent.get()
         if check.isdigit() and check.count(' ') == 0:
             self.number = int(check)
@@ -44,7 +49,8 @@ class Menu(Tk):
             self.ent.delete(0, 'end')   # стераем текст
 
     def view_words(self):
-        self.view_words.destroy()
+        """view words in file txt"""
+        self.view_in_menu.destroy()
         lab = Label(self)  # окно для вывода текста
         lab.config(text='\nВсе слова:', bg='#AFEEEE')  # настройка внешнего вида
         lab.pack()
