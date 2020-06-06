@@ -1,0 +1,12 @@
+language: python
+python:
+        - "3.6"
+	- "3.7"
+cache: pip
+install:
+        - pip install pylint
+script:
+        - pylint startprogram/launch.py
+	- pylint menuprogram/menu.py
+	- pylint mainprogram/program.py --disable=R0902
+	- pylint results/finish.py 
