@@ -1,11 +1,12 @@
 language: python
 python:
-        - "3.6"
-cache: pip
+        - 3.6
 install:
         - pip install pylint
+        - pip install -r requirements.txt
 script:
-        - pylint startprogram/launch.py
-	- pylint menuprogram/menu.py
-	- pylint mainprogram/program.py --disable=R0902
-	- pylint end/finish.py 
+        - pylint start/launch.py
+        - pylint mainscreen/menu.py
+        - pylint process/program.py --disable=R0902
+        - pylint final/finish.py
+        - python -m unittest test
