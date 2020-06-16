@@ -1,6 +1,6 @@
 import unittest
-from src.program import error
-from src.program import checking
+from ..src.program import checking
+from ..src.program import error
 
 class TestUnits(unittest.TestCase):
     def test_blocked_1(self):
