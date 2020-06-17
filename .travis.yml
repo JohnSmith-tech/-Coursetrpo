@@ -4,8 +4,8 @@ python:
 install:
         - pip install pylint
 script:
-        - pylint src/launch.py
-        - pylint src/menu.py
-        - pylint src/program.py --disable=R0902
-        - pylint src/finish.py
+        - pylint src/launch.py --disable=C0413,C0305
+        - pylint src/menu.py --disable=C0413
+        - pylint src/program.py --disable=R0902,C0413,C0305
+        - pylint src/finish.py --disable=C0305
         - python -m unittest test/*
