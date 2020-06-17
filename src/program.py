@@ -2,7 +2,9 @@
 from tkinter import Tk
 from tkinter import Label, Entry, Button
 import random
-from finish import Finish
+import sys
+sys.path.append('..')
+from src.finish import Finish
 
 
 class Program(Tk):
