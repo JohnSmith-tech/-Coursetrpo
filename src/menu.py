@@ -2,7 +2,9 @@
 from tkinter import Tk
 from tkinter import Label, Entry, Button, Text
 from tkinter import DISABLED, END
-from program import Program
+import sys
+sys.path.append('..')
+from src.program import Program
 
 
 class Menu(Tk):
