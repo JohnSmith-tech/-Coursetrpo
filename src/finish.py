@@ -49,4 +49,3 @@ class Finish(Tk):
                              fg='red')  # настройка внешнего вида
         tx1.config(state=DISABLED)  # сделали неизменяемым
         tx2.config(state=DISABLED)  # сделали неизменяемым
-
