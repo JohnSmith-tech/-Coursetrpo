@@ -83,3 +83,4 @@ def error(word):
     if word.count(' ') == 0 and word.islower() and all(i.isalpha() for i in word):
         return True
     return False
+
