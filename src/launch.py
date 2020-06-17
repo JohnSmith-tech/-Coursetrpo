@@ -1,5 +1,7 @@
 """Start program"""
-from menu import Menu
+import sys
+sys.path.append('..')
+from src.menu import Menu
 
 
 def main():
