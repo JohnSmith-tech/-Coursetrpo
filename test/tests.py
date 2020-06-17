@@ -1,6 +1,8 @@
 import unittest
-from ..src.program import checking
-from ..src.program import error
+import sys
+sys.path.append('..')
+from src.program import checking
+from src.program import error
 
 class TestUnits(unittest.TestCase):
     def test_blocked_1(self):
@@ -49,5 +51,3 @@ class TestUnits(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-
