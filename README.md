@@ -5,7 +5,7 @@
 - python 3.6
 - Tkinter3 (графическая библиотека)
 ## Запуск приложения
-cd Coursetrpo
-cd src
-python3 launch.py
+- cd Coursetrpo
+- cd src
+- python3 launch.py
 
