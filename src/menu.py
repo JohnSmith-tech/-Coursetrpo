@@ -24,7 +24,7 @@ class Menu(Tk):
                          font=('Arial', 21, 'bold'), bg='#AFEEEE')  # настройка внешнего вида
         self.lab1.pack()  # зафиксировали на окне
         self.lab2 = Label(self)  # окно для вывода текста
-        self.lab2.config(text='Для запуска программы вам нужно ввести кол-во слов (от 1 до 50)',
+        self.lab2.config(text='Введите кол-во слов (от 1 до 50)',
                          fg='red', font=5, bg='#AFEEEE')  # настройка внешнего вида
         self.lab2.pack()  # зафиксировали на окне
         self.ent = Entry(self, bd=4)  # окно для ввода текста
